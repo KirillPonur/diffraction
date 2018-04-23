@@ -1,0 +1,79 @@
+\begin{table}[H]
+	    \caption{Результаты эксперимента}
+	    \label{tab:chem1}
+	    \pgfkeys{/pgf/number format/.cd,
+		fixed,  1000 sep={\,}}
+% \newlength\Colsep
+% \setlength\Colsep{10pt}
+% \xdef\Table{data/i.tsv}
+	     % \xdef\C{5e-8}
+% \xdef\R{13000}  
+\pgfplotstableset{
+	% multicolumn names, % allows to have multicolumn names
+	% header=has colnames,
+	dec sep align,
+	col sep=tab, % the seperator in our .csv file
+	fixed zerofill, 
+	% precision=4,			
+	columns/No/.style={
+		column name={№},
+		precision=0		
+	},	
+	columns/y/.style={
+		column name={$y$, мм},
+		% sci,
+		precision=0,		
+	},		
+	columns/d/.style={
+		column name={$d_\text{кр}$},
+		% sci,
+		precision=2,		
+	},	
+	columns/N/.style={
+		column name={$N_\text{кр}$},
+		% sci,
+		precision=0,		
+	},		
+	columns/MN/.style={
+		column name={$MN_\text{кр}$},
+		% sci,
+		precision=2,		
+	},		
+	columns/d2/.style={
+		column name={$d_\text{зел}$},
+		% sci,
+		precision=2,		
+	},	
+	columns/N2/.style={
+		column name={$N_\text{зел}$},
+		% sci,
+		precision=0,		
+	},		
+	columns/MN2/.style={
+		column name={$MN_\text{зел}$},
+		% sci,
+		precision=2,		
+	},					
+	empty cells with={\textbf{--}},
+	every head row/.style={
+	before row={\toprule},
+	after row={
+		\midrule}
+		},
+	every last row/.style={after row=\bottomrule},
+	every row/.style={after row=\midrule}, 
+	columns={No,y,d,N,MN,d2,N2,MN2},		
+	% dec zerofill
+	% fixed,fixed zerofill,
+	% precision=3
+	% every even column/.style={
+	% 	% column type/.add={>{\columncolor[gray]{.8}}}{}
+	% },
+	% every even row/.style={
+	% 	before row={\rowcolor[gray]{0.95}}
+	% },	
+	}
+	\centering
+	\pgfplotstabletypeset[]{data/tab4-2.tsv}
+
+\end{table}

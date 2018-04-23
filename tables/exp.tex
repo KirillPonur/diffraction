@@ -1,0 +1,10 @@
+\begin{table}[H]
+	    \caption{Результаты эксперимента}
+	    \label{tab:chem1}
+	    \pgfkeys{/pgf/number format/.cd,
+		fixed,  1000 sep={\,}}
+
+	\pgfplotstableread{../data/tab3-1.tsv}\mytable
+	\input{table/tab.tex}
+
+\end{table}

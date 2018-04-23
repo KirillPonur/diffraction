@@ -1,0 +1,72 @@
+\documentclass[tikz]{standalone}
+
+\usepackage[english,russian]{babel}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage
+{
+    tikz,
+    pgfplots,
+    verbatim,
+    amssymb,
+}
+
+\usetikzlibrary
+{
+    arrows,
+    patterns,
+    angles,
+    quotes,
+    calc, 
+    3d,
+    backgrounds, 
+    positioning,
+	babel
+}
+\newcommand{\lineann}[4][0.5]{%
+    \begin{scope}[rotate=#2, blue,inner sep=2pt, ]
+        \draw[dashed, blue!40] (0,0) -- +(0,#1)
+            node [coordinate, near end] (a) {};
+        \draw[dashed, blue!40] (#3,0) -- +(0,#1)
+            node [coordinate, near end] (b) {};
+        \draw[|<->|] (a) -- node[fill=white, scale=0.8] {#4} (b);
+    \end{scope}
+}
+\begin{document}
+    \begin{tikzpicture}[]
+   \xdef\setka{0}
+    \xdef\opa{0.05}
+    \xdef\SIZE{8} 
+    \xdef\SIZEX{8}
+	\xdef\angle{20}
+    \input{setka}
+    	\draw[thick] (0,0) -- (0,1) (0,2) -- (0,3) (0,4) -- (0,5);
+	\foreach \i in {1,3}{
+		\foreach \j in {0,0.2,...,1}{
+			\draw[opacity=0.5] (0,\j+\i) -- ++(\angle:4);
+		}
+	}
+	\draw (0,3.5) node [left] {$1$};
+\draw (0,1.5) node [left] {$2$};
+    \path (0,1) -- ++(\angle:4) coordinate (A);
+	\path (0,1) coordinate (A2);
+    \draw[dashed] (0,4) coordinate (B2) -- ++({\angle-90}:3.5) coordinate (C2);
+	\draw[dashed] (0,2)  -- ++({\angle-90}:1);
+	\draw[dashed] (0,1) coordinate (B) -- ++(4,0) coordinate (C);
+	\draw[fill=magenta]  (4,4) circle (2pt) node [above] {$P$};
+
+\draw pic["$\Theta$", draw=black, ->, solid, angle eccentricity=1.2, angle radius=2cm]{angle=C--B--A};
+\draw pic["$\Theta$", draw=black, ->, solid, angle eccentricity=1.1, angle radius=3.4cm]{angle=A2--B2--C2};
+
+\draw[red] (0,2) -- node[above] {$\delta$} ++(\angle:{2*sin(\angle)});
+
+    \begin{scope}[yshift=3cm]
+        \lineann[1.25]{90}{1}{$b$}
+        \lineann[2.5]{90}{2}{$d$}
+    \end{scope}
+
+    \draw[->] (-3,5) -- (-3,0) node[below] {$+x$};
+    \draw (-2.9,4) -- (-3.1,4) node[left] {$0$};
+    \end{tikzpicture}    
+\end{document}

@@ -1,6 +1,35 @@
 \input{text/diss}
 \usepackage{setspace}
+\usepackage{amsmath}
 
+\DeclareMathOperator{\sinc}{sinc}
+\newcommand{\dif}[3]{
+
+
+\pgfplotstablegetelem{0}{#2}\of#1
+
+% add column LocalDistance
+\pgfplotstablecreatecol
+    [expr={\thisrow{#2} - \pgfplotsretval}]
+    {LocalDistance#3}{#1}
+
+% add column DifferenceDistance
+\pgfplotstablecreatecol
+    % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
+    % [expr={rad(180)}]
+    [expr={-\thisrow{LocalDistance#3} + \prevrow{LocalDistance#3}}]
+    {#3}{#1}
+
+}
+\newcommand{\Exp}[1]{
+	\exp\left(#1\right)
+}
+\newcommand{\Sinc}[1]{
+	\sinc\left(#1\right)
+}
+\newcommand{\Sin}[1]{
+	\sin\left(#1\right)
+}
 \begin{document}
 
 \def\labauthors{Понур К.А., Сарафанов Ф.Г., Сидоров Д.А.}
@@ -63,8 +92,150 @@
 Формула (\ref{eq:3}) даёт возможность определить шишину источника света по найденному опытным путём расстоянию $d$ между щелями, при котором наступает размытие дифракционной картины.
 
 Таким был метод, использованный в 1920 г. Майкельсоном для измерения углового расстояния между компонентами двойной звезды Капеллы и диаметра звезды Бетельгейзе.
+
+\subsection{Вывод уравнения интенсивностей при дифракции Франгофера на решетке}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{ris/diff}
+	\caption{Caption here}
+	\label{fig:figure1}
+\end{figure}
+
+Сначала выведем дифракцию на первой щели, пользуясь принципом Гюйгенса-Френеля. 
+
+Пусть на щель падает свет амплитудой $E_0$, длиной волны $\lambda$.  Щель разобьем на бесконечно малые излучатели шириной $dx$ и с амплитудой излучаемой волны $\frac{E_0}{b}dx$.  
+
+Набег фазы для каждого такого излучателя относительно излучателя с координатой $x=0$ будет $k\Delta=k\cdot x \sin\Theta$:
+
+\begin{equation}
+	d\hat{E}(x)=\frac{\hat{E}_0}{b}\cdot\Exp{i\cdot k x \sin\Theta} dx
+\end{equation}
+Проинтегрируем по всей щели:
+\begin{gather}
+	\hat{E}_{1}=\hat{E}_0\int\limits_0^b \frac{1}{i\cdot kb\sin\Theta} \Exp{i\cdot k x \sin\Theta} d[i\cdot k x \sin\Theta]=\\=
+	\hat{E}_0 \frac{\Exp{i\cdot k b \sin\Theta}-1}{i\cdot kb\sin\Theta}=
+	\hat{E}_0\Exp{i\cdot \frac{k b \sin\Theta}{2}} \frac{\Exp{i\cdot \frac{k b \sin\Theta}{2}}-\Exp{-i\cdot \frac{k b \sin\Theta}{2}}}{i\cdot kb\sin\Theta}=\\=
+	\hat{E}_0\Exp{i\cdot \frac{k b \sin\Theta}{2}} \Sinc{\frac{k b \sin\Theta}{2}}
+\end{gather}
+
+<<Спрячем>> экспоненту в комплексную амплитуду. Это не повлияет на решение, так как для всех щелей набег фазы в этой экспоненте будет одинаков.
+
+\begin{equation}
+	\hat{E}_{1}=\hat{E}_{a}\Sinc{\frac{k b \sin\Theta}{2}}
+\end{equation}
+
+Теперь рассмотрим сложение волн, пришедших от всех щелей в дифракционной решетке. Нетрудно показать, что набег фазы будет зависеть от номера щели и угла $\Theta$:
+\begin{equation}
+	\hat{E}_m=\hat{E}_{1}\Exp{i\cdot k (m-1)d\sin\Theta},
+\end{equation}
+где $m$ -- номер щели.
+
+Тогда можем записать сумму волн:
+\begin{equation}
+	\hat{E}(\Theta)=\hat{E}_1 \left(
+		1+\Exp{i\cdot kd\sin\Theta}+\ldots+\Exp{i\cdot k (N-1)d\sin\Theta}
+	\right)
+\end{equation}
+
+Второй множитель здесь -- решеточный множитель, который дает постоянный сдвиг фазы и множитель вида $\sin  Nx / \sin x$. Нетрудно показать, что тогда
+
+\begin{equation}
+	\hat{E}(\Theta) \sim \hat{E}_1 \Sinc{\frac{k b \sin\Theta}{2}}
+	\left[
+		\frac{\Sin{\frac{Nk d \sin\Theta}{2}}}{\Sin{\frac{k d \sin\Theta}{2}}}
+	\right]
+\end{equation}
+
+И тогда окончательный результат:
+
+\begin{equation}
+	I(\Theta) = I_0 \sinc^2\left(\frac{k b \sin\Theta}{2}\right)
+	\left[
+		\frac{\displaystyle\Sin{\frac{Nk d \sin\Theta}{2}}}{\displaystyle\Sin{\frac{k d \sin\Theta}{2}}}
+	\right]^2
+\end{equation}
+
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Заключение}
+\begin{table}[H]
+	    \caption{$b=0.52$ мм, $N=1$, по минимумам}
+	    \label{tab:chem1}
+	    % \pgfkeys{/pgf/number format/.cd,
+		% fixed,  1000 sep={\,}}
+
+	\pgfplotstableread{data/N1.tsv}\mytable
+	\input{tables/tab.tex}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{plot/N1.png}
+	\caption{Теоретический вид распределения интенсивности, дифракция на одной щели}
+	\label{fig:figure1}
+\end{figure}
+\begin{table}[H]
+	    \caption{$b=0.52$ мм, $d=1.5$ мм, $N=2$, по минимумам}
+	    \label{tab:chem1}
+	    % \pgfkeys{/pgf/number format/.cd,
+		% fixed,  1000 sep={\,}}
+
+	\pgfplotstableread{data/N2.tsv}\mytable
+	\input{tables/tab.tex}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{plot/N2.png}
+	\caption{Теоретический вид распределения интенсивности, дифракция на двух щелях}
+	\label{fig:figure1}
+\end{figure}
+\begin{table}[H]
+	    \caption{$b=1$ мм, $d=2$ мм, $N=15$, по максимумам}
+	    \label{tab:chem1}
+	    % \pgfkeys{/pgf/number format/.cd,
+		% fixed,  1000 sep={\,}}
+
+	\pgfplotstableread{data/N15.tsv}\mytable
+	\input{tables/tab.tex}
+\end{table}
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{plot/N15.png}
+	\caption{Теоретический вид распределения интенсивности, дифракция на пятнадцати щелях}
+	\label{fig:figure1}
+\end{figure}
+
+Изначально свет идет от лампочки накаливания, размер спиральки которой 3 мм.
+
+% Показания микрометра щели (источник):
+
+% темнота (щель закрыта) -- 7*10^{-2} mm
+
+% четкая картинка -- 10*10^{-2} mm
+
+% размытая картинка  -- 17*10^{-2} mm
+\begin{table}[H]
+	    \caption{Показания микрометра щели источника и ширина щели для разных дифракционных картин: З--щель закрыта, Ч--чёткая дифракционная картина, Р--размытая дифракционная картина}
+	    \label{tab:chem1}
+	    % \pgfkeys{/pgf/number format/.cd,
+		% fixed,  1000 sep={\,}}
+
+	\pgfplotstableread{data/dx.tsv}\mytable
+	\input{tables/razm.tex}
+\end{table}
+
+
+
+Изменение картинки с изменением ширины щели решетки -- с уменьшением b картинка расширяется, увеличивается расстояние между максимумами
+
+Изменение картинки с изменением периода решетки -- с уменьшением d картинка расширяется (видно больше полос в 1 синке) увеличивается расстояние между максимумами
+
+Изменение картинки с изменением угла, под которым расположена дифф. решетка -- с увеличением угла  картинка расширяется
+
+Для красного ширина центрального максимума шире, чем для зеленого
+
+Распределение цветов при дифракции в белом свете: ЖЗК
+
+Дифракционная картина при изменении длины щели источника не изменяется. 
 
 \end{document}

@@ -1,0 +1,49 @@
+\pgfplotstableset{
+	% multicolumn names, % allows to have multicolumn names
+	% header=has colnames,
+	dec sep align,
+	col sep=tab, % the seperator in our .csv file
+	fixed zerofill, 
+	% precision=4,			
+	empty cells with={\textbf{--}},
+	every head row/.style={
+	before row={\toprule},
+	after row={
+		\midrule}
+		},
+	columns/T/.style={
+		column name={З, $z$, мм$\cdot10^{-2}$},
+		precision=0		
+	},	
+	columns/CH/.style={
+		column name={Ч, $z$, мм$\cdot10^{-2}$},
+		precision=0		
+	},	
+	columns/R/.style={
+		column name={Р, $z$, мм$\cdot10^{-2}$},
+		precision=0		
+	},
+	columns/R2/.style={
+		column name={Р, $\Delta x$, мм$\cdot10^{-2}$},
+		precision=0		
+	},	
+	columns/CH2/.style={
+		column name={Ч, $\Delta x$, мм$\cdot10^{-2}$},
+		precision=0		
+	},		
+	every last row/.style={after row=\bottomrule},
+	every row/.style={after row=\midrule}, 
+	% columns={N, deg,min,sec},	
+	columns={T,CH,R,CH2,R2}	
+	% dec zerofill
+	% fixed,fixed zerofill,
+	% precision=3
+	% every even column/.style={
+	% 	% column type/.add={>{\columncolor[gray]{.8}}}{}
+	% },
+	% every even row/.style={
+	% 	before row={\rowcolor[gray]{0.95}}
+	% },	
+	}
+	\centering
+	\pgfplotstabletypeset[]{\mytable}

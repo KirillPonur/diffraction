@@ -1,0 +1,91 @@
+
+\dif{\mytable}{deg}{deg2}
+\dif{\mytable}{min}{min2}
+\dif{\mytable}{sec}{sec2}
+
+\pgfplotstablecreatecol
+    % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
+    % [expr={rad(180)}]
+    % [expr={rad(\thisrow{deg2}+1/60*\thisrow{min2}+1/3600*\thisrow{sec2})*1000}]
+    [expr={3600*\thisrow{deg2}+60*\thisrow{min2}+\thisrow{sec2}}]
+    {deltas}{\mytable}
+\pgfplotstablecreatecol
+    % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
+    % [expr={rad(180)}]
+    % [expr={rad(\thisrow{deg2}+1/60*\thisrow{min2}+1/3600*\thisrow{sec2})*1000}]
+    [expr={\thisrow{deltas}/8}]
+    {ddeltas}{\mytable}
+% \pgfplotstabletypeset
+%     [columns={N,deg,min,sec,deg2, min2,sec2,deltas}]
+%     {\mytable}
+\pgfplotstableset{
+	% multicolumn names, % allows to have multicolumn names
+	% header=has colnames,
+	dec sep align,
+	col sep=tab, % the seperator in our .csv file
+	fixed zerofill, 
+	% precision=4,			
+	empty cells with={\textbf{--}},
+	every head row/.style={
+	before row={\toprule},
+	after row={
+		\midrule}
+		},
+	columns/N/.style={
+		column name={N},
+		precision=0		
+	},	
+	columns/deg/.style={
+		column name={$\Theta^\circ$},
+		precision=0		
+	},	
+	columns/min/.style={
+		column name={$\Theta'$},
+		precision=0		
+	},	
+	columns/sec/.style={
+		column name={$\Theta''$},
+		precision=0,
+		column type/.add={}{|}
+	},	
+	columns/sec2/.style={
+		column name={$\Delta\Theta''$},
+		precision=0,
+		column type/.add={}{|},
+	},	
+	columns/min2/.style={
+		column name={$\Delta\Theta'$},
+		precision=0		
+	},	
+	columns/deg2/.style={
+		column name={$\Delta\Theta^\circ$},
+		precision=0,
+	},	
+	columns/deltas/.style={
+		column name={$\Delta\Theta$, $''$},
+		precision=0,
+		dec sep align,
+		% column type = {r}
+	},	
+	columns/ddeltas/.style={
+		column name={погрешность, $''$},
+		precision=0,
+		dec sep align,
+		% column type = {r}
+	},	
+	every last row/.style={after row=\bottomrule},
+	every row/.style={after row=\midrule}, 
+	% columns={N, deg,min,sec},	
+	columns={N,deg,min,sec,deg2, min2,sec2,deltas, ddeltas}	
+	% dec zerofill
+	% fixed,fixed zerofill,
+	% precision=3
+	% every even column/.style={
+	% 	% column type/.add={>{\columncolor[gray]{.8}}}{}
+	% },
+	% every even row/.style={
+	% 	before row={\rowcolor[gray]{0.95}}
+	% },	
+	}
+	\centering
+	\pgfplotstabletypeset[]{\mytable}

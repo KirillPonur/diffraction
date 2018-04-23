@@ -1,0 +1,25 @@
+\input{img.tex}
+\begin{document}
+% \pagecolor{black}
+\begin{tikzpicture}
+	\begin{axis}[
+			% white,
+			% osci,
+			% axis background/.style={fill=black},
+            % width=15cm,            
+            % height=5cm, 
+            % xlabel={$t$},
+            % ylabel={$u$},
+            xlabel={Время, $t$},
+            ylabel={Напряжение, $u$},
+            restrict y to domain=0.01:500,
+         	restrict x to domain=-90:90,
+         	grid=major,
+         	ymode=log,
+		]
+		% \pgfplotstableset{x expr=\thisrow{x}*0.00021*100, y expr=\thisrow{y}}
+		\addplot[black, opacity=0.9, smooth, line width=0.5pt] table [x=theta,y=I, col sep = tab] {../data/N15t.tsv};
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}
