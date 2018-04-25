@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1524677921 "diffraction.tex" "diffraction.pdf" "diffraction" 1524677922
+["pdflatex"] 1524685335 "diffraction.tex" "diffraction.pdf" "diffraction" 1524685336
   "/dev/null" 1524677315 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/osabio/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm" 1523865364 3308 eee81981029f67083258db36df06e523 ""
   "/home/osabio/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1523865362 3304 6a543c07045572737981351171e0505e ""
@@ -307,9 +307,9 @@
   "data/N15.tsv" 1524677475 49 e053483ab135d7224d606eb5f4449582 ""
   "data/N2.tsv" 1524332471 161 912d7a3f2223e3bd7ac77c0342c41625 ""
   "data/dx.tsv" 1524391338 26 4fc338c0d5f726f784a1cb9c4a68ac75 ""
-  "diffraction.aux" 1524677922 12310 201614f687e3c849ca1bc58f7eff98aa ""
-  "diffraction.tex" 1524677829 14045 e16bdf0653b7a55bae1816814ae87aae ""
-  "diffraction.toc" 1524677922 5849 e87ff9437dcec1628833062a85650b42 ""
+  "diffraction.aux" 1524685336 12867 c3d0c37a28df86659697fb2858070eb5 ""
+  "diffraction.tex" 1524685322 15307 f265a1bd62e010e59746fa5dda6da9a9 ""
+  "diffraction.toc" 1524685336 6386 4171e706569f0f6e000d8916a82428a7 ""
   "plot/N1.pdf" 1524677475 440494 eb2791894236e057c15d9c9b9d592c3d ""
   "plot/N15.pdf" 1524677475 454461 d1cc6fc1abf5891c6a44a7fa9748abcb ""
   "plot/N2.pdf" 1524677475 449971 934ae700e616c10e7aae3e6737d52201 ""
@@ -319,7 +319,7 @@
   "text/diss.tex" 1524317068 7378 de63078cdeb2a897b410b5c667fa64a9 ""
   "text/titlepage.tex" 1524317068 678 ae795d40a3cc9bfbe3be5ea4b0cfc384 ""
   (generated)
+  "diffraction.aux"
   "diffraction.toc"
   "diffraction.pdf"
-  "diffraction.aux"
   "diffraction.log"
