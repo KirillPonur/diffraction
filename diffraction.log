@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  23 APR 2018 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  25 APR 2018 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1319,46 +1319,46 @@ Overfull \hbox (4.95464pt too wide) in paragraph at lines 105--106
 
 [3 <./ris/diff.pdf>] [4]
 PGFPlots: reading {data/dx.tsv}
- (./tables/razm.tex)
+ (./tables/razm.tex) [5]
 PGFPlots: reading {data/N1.tsv}
  (./tables/tab.tex)
-<plot/N1.pdf, id=77, 462.52798pt x 346.89601pt>
+<plot/N1.pdf, id=80, 462.52798pt x 346.89601pt>
 File: plot/N1.pdf Graphic file (type pdf)
 <use plot/N1.pdf>
-Package pdftex.def Info: plot/N1.pdf  used on input line 223.
+Package pdftex.def Info: plot/N1.pdf  used on input line 231.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
- [5]
+ [6]
 PGFPlots: reading {data/N2.tsv}
 
 (./tables/tab.tex)
-<plot/N2.pdf, id=81, 484.209pt x 267.39899pt>
+<plot/N2.pdf, id=85, 484.209pt x 267.39899pt>
 File: plot/N2.pdf Graphic file (type pdf)
 <use plot/N2.pdf>
-Package pdftex.def Info: plot/N2.pdf  used on input line 240.
+Package pdftex.def Info: plot/N2.pdf  used on input line 248.
 (pdftex.def)             Requested size: 484.20781pt x 267.39833pt.
 
-Overfull \hbox (0.51094pt too wide) in paragraph at lines 240--241
+Overfull \hbox (0.51094pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
-[6 <./plot/N1.pdf>]
+[7 <./plot/N1.pdf>]
 PGFPlots: reading {data/N15.tsv}
  (./tables/tab.tex)
-<plot/N15.pdf, id=123, 462.52798pt x 346.89601pt>
+<plot/N15.pdf, id=126, 462.52798pt x 346.89601pt>
 File: plot/N15.pdf Graphic file (type pdf)
 <use plot/N15.pdf>
-Package pdftex.def Info: plot/N15.pdf  used on input line 256.
+Package pdftex.def Info: plot/N15.pdf  used on input line 264.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
- [7 <./plot/N2.pdf>] [8 <./plot/N15.pdf>] (./diffraction.aux)
+ [8 <./plot/N2.pdf>] [9 <./plot/N15.pdf>] (./diffraction.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 46158 strings out of 492982
- 1115649 string characters out of 6138580
- 1355148 words of memory out of 5000000
- 48916 multiletter control sequences out of 15000+600000
+ 46159 strings out of 492982
+ 1115663 string characters out of 6138580
+ 1346789 words of memory out of 5000000
+ 48917 multiletter control sequences out of 15000+600000
  541686 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,12n,128p,10346b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1380,10 +1380,10 @@ texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf-dist/font
 s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/
 cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm17
 28.pfb>
-Output written on diffraction.pdf (9 pages, 630350 bytes).
+Output written on diffraction.pdf (10 pages, 632041 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 230 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
