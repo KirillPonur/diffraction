@@ -1,8 +1,16 @@
 import numpy as np
 from numpy import sin,pi
-# import matplotlib
+import matplotlib
 # matplotlib.use('Agg')
 from matplotlib import pyplot as plt 
+from matplotlib import rc
+rc('font',**{'family':'serif'})
+rc('text', usetex=True)
+rc('text.latex',unicode=True)
+rc('text.latex',preamble=r'\usepackage[utf8]{inputenc}')
+rc('text.latex',preamble=r'\usepackage[russian]{babel}')
+matplotlib.rcParams.update({'font.size': 13})
+
 sint=np.linspace(-0.003,0.003,100000);
 
 la=640
@@ -17,7 +25,7 @@ N=2
 plt.xlim([-600,600])
 
 
-# plt.ylim(ymin=10**-4,ymax=(N**2)*1.5)
+plt.ylim(ymin=10**-4,ymax=(N**2)*1.5)
 
 la=la*10**(-9)
 k=2*pi/la
@@ -32,8 +40,8 @@ DM=(sin(k*b*sint/2)/((k*b*sint/2)))**2
 # x = np.arange(1,11) 
 # y = 2 * x + 5 
 plt.title("N="+str(N)+", b="+str(b*1000)+" мм, d="+str(d*1000)+" мм, длина волны "+str(la*10**9)+' нм') 
-plt.xlabel(r'Угол, в угловых секундах') 
-plt.ylabel(r'Интенсивность, I')
+plt.xlabel(r'$\Theta$, угловых секунд') 
+plt.ylabel(r'Интенсивность, $I(\Theta)$')
 # plt.ylabel("y axis caption"
 P=180/pi*3600
 for i in [0,1,2,3,4,5,6,-1,-2,-3,-4,-5,-6]: 

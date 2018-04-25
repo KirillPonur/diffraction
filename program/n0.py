@@ -1,9 +1,16 @@
 import numpy as np
 from numpy import sin,pi
-# import matplotlib
+import matplotlib
 # matplotlib.use('Agg')
 from matplotlib import pyplot as plt 
 sint=np.linspace(-0.01,0.01,100000);
+from matplotlib import rc
+rc('font',**{'family':'serif'})
+rc('text', usetex=True)
+rc('text.latex',unicode=True)
+rc('text.latex',preamble=r'\usepackage[utf8]{inputenc}')
+rc('text.latex',preamble=r'\usepackage[russian]{babel}')
+matplotlib.rcParams.update({'font.size': 13})
 
 la=640
 
@@ -27,8 +34,8 @@ DM=(sin(k*b*sint/2)/((k*b*sint/2)))**2
 # x = np.arange(1,11) 
 # y = 2 * x + 5 
 plt.title("N="+str(N)+", b="+str(b*1000)+" мм, длина волны "+str(la*10**9)+' нм') 
-plt.xlabel(r'Угол, в угловых секундах') 
-plt.ylabel(r'Интенсивность, I')
+plt.xlabel(r'$\Theta$, угловых секунд') 
+plt.ylabel(r'Интенсивность, $I(\Theta)$')
 # plt.ylabel("y axis caption"
 P=180/pi*3600
 # for i in [0,1,2,3,4,5,6,-1,-2,-3,-4,-5,-6]: 
@@ -43,7 +50,7 @@ plt.yscale('log')
 plt.plot(sint*P,DM,c='black',linestyle='-',alpha=1,lw=1.4) 
 # plt.xticks([la/d],["1"])
 # plt.show()
-plt.savefig('../plot/N1.png', dpi=300, format='png')
+plt.savefig('../plot/N1.pdf', format='pdf')
 
 # x=np.array([1,2,3])
 # y=np.array([1,2,3])
