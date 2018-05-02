@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.10.3)  21 APR 2018 21:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  26 APR 2018 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./tab.tex
+**tab.tex
 (./tab.tex
 LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 ! Undefined control sequence.
 l.2 \dif
         {\mytable}{deg}{deg2}
@@ -190,14 +190,158 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--12
+[]
+ []
+
 ! Undefined control sequence.
-l.12 \pgfplotstablecreatecol
+l.14 \pgfplotstablecreatecol
                             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18     [
+          expr={3600*(\thisrow{deg}-\deltaG)+60*(\thisrow{min}-\deltaM)+\thi...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+! Undefined control sequence.
+l.18     [expr={3600*(\thisrow
+                              {deg}-\deltaG)+60*(\thisrow{min}-\deltaM)+\thi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no - in font nullfont!
+! Undefined control sequence.
+l.18     [expr={3600*(\thisrow{deg}-\deltaG
+                                           )+60*(\thisrow{min}-\deltaM)+\thi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ) in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+! Undefined control sequence.
+l.18 ...{3600*(\thisrow{deg}-\deltaG)+60*(\thisrow
+                                                  {min}-\deltaM)+\thisrow{se...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no - in font nullfont!
+! Undefined control sequence.
+l.18 ...ow{deg}-\deltaG)+60*(\thisrow{min}-\deltaM
+                                                  )+\thisrow{sec}-\deltaS}]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ) in font nullfont!
+Missing character: There is no + in font nullfont!
+! Undefined control sequence.
+l.18 ...eltaG)+60*(\thisrow{min}-\deltaM)+\thisrow
+                                                  {sec}-\deltaS}]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no - in font nullfont!
+! Undefined control sequence.
+l.18 ...hisrow{min}-\deltaM)+\thisrow{sec}-\deltaS
+                                                  }]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no 3 in font nullfont!
+! Undefined control sequence.
+l.19     {sec3}{\mytable
+                        }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--20
+[]
+ []
+
+! Undefined control sequence.
+l.21 \pgfplotstablecreatecol
+                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     [
+          expr={\thisrow{deltas}/8}]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no [ in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -206,7 +350,7 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.16     [expr={\thisrow
+l.25     [expr={\thisrow
                         {deltas}/8}]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -231,7 +375,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 ! Undefined control sequence.
-l.17     {ddeltas}{\mytable
+l.26     {ddeltas}{\mytable
                            }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -240,7 +384,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.21 \pgfplotstableset
+l.30 \pgfplotstableset
                       {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -332,7 +476,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.30 	before row={\toprule
+l.39 	before row={\toprule
                           },
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -351,7 +495,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.32 		\midrule
+l.41 		\midrule
                }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -433,9 +577,9 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 39.
+(Font)              <7> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 39.
+(Font)              <5> on input line 48.
 Missing character: There is no , in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -878,7 +1022,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.76 	every last row/.style={after row=\bottomrule
+l.85 	every last row/.style={after row=\bottomrule
                                                   },
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -913,7 +1057,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.77 	every row/.style={after row=\midrule
+l.86 	every row/.style={after row=\midrule
                                           },
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -973,9 +1117,14 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no 3 in font nullfont!
 ! Undefined control sequence.
-l.91 	\pgfplotstabletypeset
-                           []{\mytable}
+l.100 	\pgfplotstabletypeset
+                            []{\mytable}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -985,8 +1134,8 @@ and I'll forget about whatever was undefined.
 Missing character: There is no [ in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.91 	\pgfplotstabletypeset[]{\mytable
-                                      }
+l.100 	\pgfplotstabletypeset[]{\mytable
+                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -995,17 +1144,17 @@ and I'll forget about whatever was undefined.
 
 )
 ! Emergency stop.
-<*> ./tab.tex
-             
+<*> tab.tex
+           
 *** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
- 10 strings out of 492995
- 173 string characters out of 6136402
- 54074 words of memory out of 5000000
- 3662 multiletter control sequences out of 15000+600000
+ 10 strings out of 492982
+ 175 string characters out of 6138580
+ 54251 words of memory out of 5000000
+ 3675 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,2n,12p,93b,71s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,2n,12p,100b,71s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

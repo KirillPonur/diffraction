@@ -9,6 +9,15 @@
     % [expr={rad(\thisrow{deg2}+1/60*\thisrow{min2}+1/3600*\thisrow{sec2})*1000}]
     [expr={3600*\thisrow{deg2}+60*\thisrow{min2}+\thisrow{sec2}}]
     {deltas}{\mytable}
+
+
+\pgfplotstablecreatecol
+    % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
+    % [expr={rad(180)}]
+    % [expr={rad(\thisrow{deg2}+1/60*\thisrow{min2}+1/3600*\thisrow{sec2})*1000}]
+    [expr={3600*(\thisrow{deg}-\deltaG)+60*(\thisrow{min}-\deltaM)+\thisrow{sec}-\deltaS}]
+    {sec3}{\mytable}
+
 \pgfplotstablecreatecol
     % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
     % [expr={rad(180)}]
@@ -76,7 +85,7 @@
 	every last row/.style={after row=\bottomrule},
 	every row/.style={after row=\midrule}, 
 	% columns={N, deg,min,sec},	
-	columns={N,deg,min,sec,deg2, min2,sec2,deltas, ddeltas}	
+	columns={N,deg,min,sec,deg2, min2,sec2,deltas, ddeltas,sec3}	
 	% dec zerofill
 	% fixed,fixed zerofill,
 	% precision=3

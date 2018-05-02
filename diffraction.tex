@@ -2,24 +2,26 @@
 \usepackage{setspace}
 \usepackage{amsmath}
 
+% 1 закон федора
+% когда я матерюсь, рядом идет грибова
+
 \DeclareMathOperator{\sinc}{sinc}
 \newcommand{\dif}[3]{
 
 
-\pgfplotstablegetelem{0}{#2}\of#1
+	\pgfplotstablegetelem{0}{#2}\of#1
 
-% add column LocalDistance
-\pgfplotstablecreatecol
-    [expr={\thisrow{#2} - \pgfplotsretval}]
-    {LocalDistance#3}{#1}
+	% add column LocalDistance
+	\pgfplotstablecreatecol
+	    [expr={\thisrow{#2} - \pgfplotsretval}]
+	    {LocalDistance#3}{#1}
 
-% add column DifferenceDistance
-\pgfplotstablecreatecol
-    % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
-    % [expr={rad(180)}]
-    [expr={-\thisrow{LocalDistance#3} + \prevrow{LocalDistance#3}}]
-    {#3}{#1}
-
+	% add column DifferenceDistance
+	\pgfplotstablecreatecol
+	    % [expr={-\thisrow{LocalDistance} + \prevrow{LocalDistance}}]
+	    % [expr={rad(180)}]
+	    [expr={-\thisrow{LocalDistance#3} + \prevrow{LocalDistance#3}}]
+	    {#3}{#1}
 }
 \newcommand{\Exp}[1]{
 	\exp\left(#1\right)
@@ -230,9 +232,9 @@ $\delta x$ связана с линейным размером источник�
 \end{table}
 
 \subsubsection{Порядок следования цветов}
-Распределение цветов при дифракции в белом свете: ЗЖК
+Распределение цветов при дифракции в белом свете: СЗЖК
 
-
+\newpage
 \subsection{Дифракционные картины для разных решёток}
 \subsubsection{Дифракция на одной щели}
 \begin{table}[H]
@@ -241,6 +243,9 @@ $\delta x$ связана с линейным размером источник�
 	    % \pgfkeys{/pgf/number format/.cd,
 		% fixed,  1000 sep={\,}}
 
+	\xdef\deltaG{275} 
+	\xdef\deltaM{58}
+	\xdef\deltaS{59}
 	\pgfplotstableread{data/N1.tsv}\mytable
 	\input{tables/tab.tex}
 \end{table}
@@ -257,7 +262,12 @@ $\delta x$ связана с линейным размером источник�
 	    \label{tab:chem1} 
 	    % \pgfkeys{/pgf/number format/.cd,
 		% fixed,  1000 sep={\,}}
-
+	\xdef\deltaG{0} 
+	\xdef\deltaM{0}
+	\xdef\deltaS{992627}
+	% \xdef\deltaG{275} 
+	% \xdef\deltaM{58}
+	% \xdef\deltaS{15}	
 	\pgfplotstableread{data/N2.tsv}\mytable
 	\input{tables/tab.tex}
 \end{table}
@@ -273,7 +283,9 @@ $\delta x$ связана с линейным размером источник�
 	    \label{tab:chem1}
 	    % \pgfkeys{/pgf/number format/.cd,
 		% fixed,  1000 sep={\,}}
-
+	\xdef\deltaG{275} 
+	\xdef\deltaM{51}
+	\xdef\deltaS{4}
 	\pgfplotstableread{data/N15.tsv}\mytable
 	\input{tables/tab.tex}
 \end{table}

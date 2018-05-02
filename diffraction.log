@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  25 APR 2018 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  26 APR 2018 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1178,20 +1178,20 @@ LaTeX Warning: Label `fig:figure1' multiply defined.
 )
 \openout1 = `diffraction.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
  (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -1309,35 +1309,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <ris/diff.pdf, id=55, 221.11607pt x 166.46791pt>
 File: ris/diff.pdf Graphic file (type pdf)
 <use ris/diff.pdf>
-Package pdftex.def Info: ris/diff.pdf  used on input line 100.
+Package pdftex.def Info: ris/diff.pdf  used on input line 102.
 (pdftex.def)             Requested size: 221.11552pt x 166.4675pt.
 
-Overfull \hbox (4.95464pt too wide) in paragraph at lines 105--106
+Overfull \hbox (4.95464pt too wide) in paragraph at lines 107--108
 []\T2A/cmr/m/n/12 —начала вы-ве-дем ди-фрак-цию на пер-вой ще-ли, поль-зу-€сь п
 рин-ци-пом √юйгенса-‘ренел€. 
  []
 
 [3 <./ris/diff.pdf>] [4] [5]
 PGFPlots: reading {data/dx.tsv}
- (./tables/razm.tex) [6]
+ (./tables/razm.tex) [6] [7]
 PGFPlots: reading {data/N1.tsv}
  (./tables/tab.tex)
-<plot/N1.pdf, id=84, 462.52798pt x 346.89601pt>
+<plot/N1.pdf, id=87, 462.52798pt x 346.89601pt>
 File: plot/N1.pdf Graphic file (type pdf)
 <use plot/N1.pdf>
-Package pdftex.def Info: plot/N1.pdf  used on input line 249.
+Package pdftex.def Info: plot/N1.pdf  used on input line 254.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-
-[7]
 PGFPlots: reading {data/N2.tsv}
- (./tables/tab.tex)
+
+(./tables/tab.tex)
 <plot/N2.pdf, id=88, 484.209pt x 267.39899pt>
 File: plot/N2.pdf Graphic file (type pdf)
 <use plot/N2.pdf>
-Package pdftex.def Info: plot/N2.pdf  used on input line 266.
+Package pdftex.def Info: plot/N2.pdf  used on input line 276.
 (pdftex.def)             Requested size: 484.20781pt x 267.39833pt.
 
-Overfull \hbox (0.51094pt too wide) in paragraph at lines 266--267
+Overfull \hbox (0.51094pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
@@ -1347,7 +1346,7 @@ PGFPlots: reading {data/N15.tsv}
 <plot/N15.pdf, id=129, 462.52798pt x 346.89601pt>
 File: plot/N15.pdf Graphic file (type pdf)
 <use plot/N15.pdf>
-Package pdftex.def Info: plot/N15.pdf  used on input line 282.
+Package pdftex.def Info: plot/N15.pdf  used on input line 294.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
  [9 <./plot/N2.pdf>] [10 <./plot/N15.pdf>] (./diffraction.aux)
 
@@ -1355,13 +1354,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 46159 strings out of 492982
- 1115663 string characters out of 6138580
- 1346790 words of memory out of 5000000
- 48917 multiletter control sequences out of 15000+600000
+ 46198 strings out of 492982
+ 1116459 string characters out of 6138580
+ 1357317 words of memory out of 5000000
+ 48956 multiletter control sequences out of 15000+600000
  541686 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,12n,128p,10346b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,12n,128p,10346b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -1380,7 +1379,7 @@ texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf-dist/font
 s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/
 cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm17
 28.pfb>
-Output written on diffraction.pdf (11 pages, 634203 bytes).
+Output written on diffraction.pdf (11 pages, 634634 bytes).
 PDF statistics:
  233 PDF objects out of 1000 (max. 8388607)
  173 compressed objects within 2 object streams

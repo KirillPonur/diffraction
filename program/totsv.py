@@ -1,36 +1,40 @@
 import numpy as np
-from numpy import sin,pi
+from numpy import sin,pi,cos
 import matplotlib
 # matplotlib.use('Agg')
 from matplotlib import pyplot as plt 
 from matplotlib import rc
+from matplotlib.widgets import Slider, Button, RadioButtons
 rc('font',**{'family':'serif'})
 rc('text', usetex=True)
 rc('text.latex',unicode=True)
 rc('text.latex',preamble=r'\usepackage[utf8]{inputenc}')
 rc('text.latex',preamble=r'\usepackage[russian]{babel}')
 matplotlib.rcParams.update({'font.size': 13})
-
+# sfreq = Slider(axfreq, 'Freq', 0.1, 30.0, valinit=f0, valstep=delta_f)
 sint=np.linspace(-0.003,0.003,100000);
 
 la=640
 b=1
 d=2
-N=15
-plt.xlim([-90,90])
-
-b=0.52
-d=1.5
-N=2
-plt.xlim([-600,600])
-
-
-plt.ylim(ymin=10**-4,ymax=(N**2)*1.5)
-
+h=1
 la=la*10**(-9)
 k=2*pi/la
 b=b*10**(-3)
 d=d*10**(-3)
+h=h*10**(-3)
+
+theta=30
+b=b*cos(theta)-h*sin(theta)
+d=d*cos(theta)
+N=15
+plt.xlim([-500,500])
+
+
+
+plt.ylim(ymin=10**-3,ymax=(N**2)*1.5)
+
+
 
 I0=1
 RM=(sin(N*k*d*sint/2)/sin(k*d*sint/2))**2
@@ -39,7 +43,8 @@ DM=(sin(k*b*sint/2)/((k*b*sint/2)))**2
 
 # x = np.arange(1,11) 
 # y = 2 * x + 5 
-plt.title("N="+str(N)+", b="+str(b*1000)+" мм, d="+str(d*1000)+" мм, длина волны "+str(la*10**9)+' нм') 
+# plt.title("N="+str(N)+", b="+str(b*1000)+" мм, d="+str(d*1000)+" мм, длина волны "+str(la*10**9)+' нм') 
+plt.title("N="+str(N)+", theta="+str(theta/pi*180)+" град, длина волны "+str(la*10**9)+' нм') 
 plt.xlabel(r'$\Theta$, угловых секунд') 
 plt.ylabel(r'Интенсивность, $I(\Theta)$')
 # plt.ylabel("y axis caption"
